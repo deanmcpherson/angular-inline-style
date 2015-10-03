@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('dm.style', [])
-  .directive('style', function($compile) {
+  .directive('style', ['$compile', function($compile) {
     return {
       restrict: 'E',
       link: function postLink(scope, element) {
@@ -11,4 +11,4 @@ angular.module('dm.style', [])
         }
       }
     };
-  });
+  }]);
